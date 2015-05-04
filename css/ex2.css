@@ -1,0 +1,356 @@
+/* Two column responsive */
+
+/* clearfix - allows parent container to contain floated elements */
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1; /* for IE6 and IE7 */
+}
+
+/* Set box-sizing property to border-box
+This will prevent padding from increasing an element's
+width/height
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #04648b;
+}
+
+a:hover {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+/* max-width: when browser window is < 1020px it will
+shrink to fit
+*/
+.center-global {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+body {
+  background: #dce5ff;
+}
+
+body > header {
+  background: #dce5ff;
+  padding: 1.3em;
+}
+
+.logo {
+  margin-top : 10px;
+}
+
+nav {
+  float: right;
+  margin-top: 1.96078%; /* 20px / 1020px */
+  margin-right: 17.3529412%; /* 177px/1020px */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  /*display: inline; /* for IE7 */
+  margin-right: 30px;
+}
+
+.promo-wrapper {
+  background: aliceblue;
+}
+.promo {
+  position: relative;
+  z-index: 5;
+  /* ensure that promo image doesn't flow out of promo section */
+  overflow: hidden;
+}
+
+/* Override any html width and height setting in the image */
+.promo img {
+  width: 100%; /* image fills out entire container */
+  height: auto; /* keeps aspect ratio correct */
+}
+
+.promo-desc {
+  position: absolute;
+  bottom: 50px;
+  left: 7.3529412%; /* 75px/1020px */;
+}
+
+.promo-desc a {
+  text-decoration: none;
+  color: #ffffff;
+  width: 9.8039216%; /* 100px/1020px */
+  height: 50px;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  background: #04648b;
+  border-radius: 10px;
+}
+
+.main {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.section-1 {
+  width: 62.745098%; /* 640px/1020px */
+  float: left;
+  padding : 0 3.9215686%; /* 40px/1020px */
+}
+
+.media {
+  clear: left;
+  padding-bottom: 28px;
+  overflow: hidden;
+}
+
+.media img {
+  float: left;
+  margin-right: 4.6875%; /* 30px/640px */
+  /* image will never be > max-width and will always
+   fill up containing element (.media)
+   Set height to auto to make proportional to width
+   */
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+}
+
+.sidebar {
+  width: 35.2941176%; /* 360px/1020px */
+  float: right;
+}
+
+/********** contact form styling ***************/
+.contact-form {
+  width: 80%;
+  margin: 0 auto 50px auto;
+}
+
+form {
+  font-size: 1.2em;
+  width: 30em;
+}
+
+
+/* fieldset styling */
+fieldset {
+  margin: 1em 0; /*  space out the fieldsets a little*/
+  padding: 1em;
+  border : 1px solid #ccc;
+}
+
+/* legend styling */
+legend {
+  font-weight: normal;
+}
+
+form div {
+  padding: 0.4em 0;
+}
+
+
+/* style for  labels */
+label {
+  display: block;
+}
+
+/* style for required labels */
+label .required {
+  font-size: 0.75em;
+  color:#760000;
+}
+
+.form-error {
+  color:#760000;
+  font-style: italic;
+}
+
+input {
+  width: 20em;
+}
+
+textarea {
+  width: 100%;
+  height: 10em;
+}
+
+input.submit {
+  width: auto;
+  background: #04648b;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+/* style form elements on focus */
+input[type="text"]:focus, textarea:focus {
+  background: #ffc;
+}
+
+
+footer {
+  background: #88b6f8;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding : 0
+}
+
+.footer-inside {
+  padding-left: 40px;
+}
+
+.footer-1 {
+  float: left;
+  width: 41.372549%; /* 422px/1020px */
+}
+
+.footer-2 {
+  float: left;
+  width: 31.9607843%; /* 326px/1020px */
+}
+
+.social {
+  margin-left: -20px;
+}
+.social li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.footer-3 {
+  float: left;
+  width: 22.745098%; /* 232px/1020px */
+}
+
+.footer-3 p {
+  color: #04648b;
+}
+
+/*desktop styles*/
+@media (max-width: 930px) {
+
+
+  nav {
+    float: none;
+    padding-top: 10px;
+    margin: 24px 0 0 0;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    padding: 8px;
+  }
+
+  .center-global {
+    width: auto;
+  }
+
+  .promo img {
+    max-height: 320px;
+  }
+
+  .promo-desc {
+    min-width: 300px;
+    bottom: 40px;
+    right: 20px;
+  }
+
+  .section-1 {
+    background: none;
+    width: auto;
+  }
+
+  .sidebar {
+    float: none;
+    clear: left;
+    width: auto;
+    padding: 20px;
+  }
+
+}
+
+/*tablet styles */
+@media (max-width: 730px) {
+  .footer-1, .footer-2, .footer-3 {
+    float: none;
+  }
+}
+
+/*mobile styles*/
+@media (max-width: 480px) {
+
+  .promo-desc a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 9.8039216%; /* 100px/1020px */
+    padding: 1.2%;
+    font-size: .6em;
+    background: #04648b;
+    border-radius: 10px;
+  }
+
+  nav ul li {
+    padding: 8px 4px;
+    font-size: 16px;
+  }
+
+  .media img {
+    float: none;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+  }
+
+  .promo-desc h1 {
+    font-size: 24px;
+  }
+
+  .footer-1 h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 340px) {
+  nav ul li {
+    display: block;
+  }
+}
